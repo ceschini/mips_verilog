@@ -1,0 +1,166 @@
+#! /usr/share/iverilog-0.9.7/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_6)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1e902b0 .scope module, "testbench1" "testbench1" 2 1;
+ .timescale -9 -12;
+v0x1ebf4a0_0 .var "A", 7 0;
+v0x1ebf570_0 .var "B", 7 0;
+v0x1ebf620_0 .net "igual", 0 0, L_0x1ec24e0; 1 drivers
+S_0x1e97340 .scope module, "teste1" "comparador_8bit" 2 5, 3 9, S_0x1e902b0;
+ .timescale -9 -12;
+v0x1ebf1f0_0 .net "A", 7 0, v0x1ebf4a0_0; 1 drivers
+v0x1ebf2b0_0 .net "B", 7 0, v0x1ebf570_0; 1 drivers
+RS_0x7fa0032317f8/0/0 .resolv tri, L_0x1ebf8d0, L_0x1ebfde0, L_0x1ec0340, L_0x1ec0930;
+RS_0x7fa0032317f8/0/4 .resolv tri, L_0x1ec0e90, L_0x1ec1500, L_0x1ec1a00, L_0x1ec20c0;
+RS_0x7fa0032317f8 .resolv tri, RS_0x7fa0032317f8/0/0, RS_0x7fa0032317f8/0/4, C4<zzzzzzzz>, C4<zzzzzzzz>;
+v0x1ebf350_0 .net8 "aux_ig", 7 0, RS_0x7fa0032317f8; 8 drivers
+v0x1ebf3f0_0 .alias "igual", 0 0, v0x1ebf620_0;
+L_0x1ebf8d0 .part/pv L_0x1ebf7c0, 7, 1, 8;
+L_0x1ebf9c0 .part v0x1ebf4a0_0, 7, 1;
+L_0x1ebfb00 .part v0x1ebf570_0, 7, 1;
+L_0x1ebfde0 .part/pv L_0x1ebfd30, 6, 1, 8;
+L_0x1ebff20 .part v0x1ebf4a0_0, 6, 1;
+L_0x1ec0010 .part v0x1ebf570_0, 6, 1;
+L_0x1ec0140 .part RS_0x7fa0032317f8, 7, 1;
+L_0x1ec0340 .part/pv L_0x1ec0290, 5, 1, 8;
+L_0x1ec04c0 .part v0x1ebf4a0_0, 5, 1;
+L_0x1ec0640 .part v0x1ebf570_0, 5, 1;
+L_0x1ec07d0 .part RS_0x7fa0032317f8, 6, 1;
+L_0x1ec0930 .part/pv L_0x1ec08d0, 4, 1, 8;
+L_0x1ec0a90 .part v0x1ebf4a0_0, 4, 1;
+L_0x1ec0b80 .part v0x1ebf570_0, 4, 1;
+L_0x1ec0cf0 .part RS_0x7fa0032317f8, 5, 1;
+L_0x1ec0e90 .part/pv L_0x1ec0de0, 3, 1, 8;
+L_0x1ec10d0 .part v0x1ebf4a0_0, 3, 1;
+L_0x1ec11c0 .part v0x1ebf570_0, 3, 1;
+L_0x1ec1350 .part RS_0x7fa0032317f8, 4, 1;
+L_0x1ec1500 .part/pv L_0x1ec1450, 2, 1, 8;
+L_0x1ec12b0 .part v0x1ebf4a0_0, 2, 1;
+L_0x1ec16f0 .part v0x1ebf570_0, 2, 1;
+L_0x1ec15f0 .part RS_0x7fa0032317f8, 3, 1;
+L_0x1ec1a00 .part/pv L_0x1ec1950, 1, 1, 8;
+L_0x1ec17e0 .part v0x1ebf4a0_0, 1, 1;
+L_0x1ec1d20 .part v0x1ebf570_0, 1, 1;
+L_0x1ec1af0 .part RS_0x7fa0032317f8, 2, 1;
+L_0x1ec20c0 .part/pv L_0x1ec2010, 0, 1, 8;
+L_0x1ec1ed0 .part v0x1ebf4a0_0, 0, 1;
+L_0x1ec22f0 .part v0x1ebf570_0, 0, 1;
+L_0x1ec21b0 .part RS_0x7fa0032317f8, 1, 1;
+L_0x1ec24e0 .part RS_0x7fa0032317f8, 0, 1;
+S_0x1ebedb0 .scope module, "BL7" "comparador_1bit" 3 13, 3 3, S_0x1e97340;
+ .timescale -9 -12;
+L_0x1ebf6d0 .functor XNOR 1, L_0x1ebf9c0, L_0x1ebfb00, C4<0>, C4<0>;
+L_0x1ebf7c0 .functor AND 1, C4<1>, L_0x1ebf6d0, C4<1>, C4<1>;
+v0x1ebeea0_0 .net "A", 0 0, L_0x1ebf9c0; 1 drivers
+v0x1ebef60_0 .net "B", 0 0, L_0x1ebfb00; 1 drivers
+v0x1ebf000_0 .net "HAB", 0 0, C4<1>; 1 drivers
+v0x1ebf0a0_0 .net *"_s0", 0 0, L_0x1ebf6d0; 1 drivers
+v0x1ebf150_0 .net "ig", 0 0, L_0x1ebf7c0; 1 drivers
+S_0x1ebe970 .scope module, "BL6" "comparador_1bit" 3 14, 3 3, S_0x1e97340;
+ .timescale -9 -12;
+L_0x1ebfcd0 .functor XNOR 1, L_0x1ebff20, L_0x1ec0010, C4<0>, C4<0>;
+L_0x1ebfd30 .functor AND 1, L_0x1ec0140, L_0x1ebfcd0, C4<1>, C4<1>;
+v0x1ebea60_0 .net "A", 0 0, L_0x1ebff20; 1 drivers
+v0x1ebeb20_0 .net "B", 0 0, L_0x1ec0010; 1 drivers
+v0x1ebebc0_0 .net "HAB", 0 0, L_0x1ec0140; 1 drivers
+v0x1ebec60_0 .net *"_s0", 0 0, L_0x1ebfcd0; 1 drivers
+v0x1ebed10_0 .net "ig", 0 0, L_0x1ebfd30; 1 drivers
+S_0x1ebe530 .scope module, "BL5" "comparador_1bit" 3 15, 3 3, S_0x1e97340;
+ .timescale -9 -12;
+L_0x1ec0230 .functor XNOR 1, L_0x1ec04c0, L_0x1ec0640, C4<0>, C4<0>;
+L_0x1ec0290 .functor AND 1, L_0x1ec07d0, L_0x1ec0230, C4<1>, C4<1>;
+v0x1ebe620_0 .net "A", 0 0, L_0x1ec04c0; 1 drivers
+v0x1ebe6e0_0 .net "B", 0 0, L_0x1ec0640; 1 drivers
+v0x1ebe780_0 .net "HAB", 0 0, L_0x1ec07d0; 1 drivers
+v0x1ebe820_0 .net *"_s0", 0 0, L_0x1ec0230; 1 drivers
+v0x1ebe8d0_0 .net "ig", 0 0, L_0x1ec0290; 1 drivers
+S_0x1ebe0f0 .scope module, "BL4" "comparador_1bit" 3 16, 3 3, S_0x1e97340;
+ .timescale -9 -12;
+L_0x1ec0870 .functor XNOR 1, L_0x1ec0a90, L_0x1ec0b80, C4<0>, C4<0>;
+L_0x1ec08d0 .functor AND 1, L_0x1ec0cf0, L_0x1ec0870, C4<1>, C4<1>;
+v0x1ebe1e0_0 .net "A", 0 0, L_0x1ec0a90; 1 drivers
+v0x1ebe2a0_0 .net "B", 0 0, L_0x1ec0b80; 1 drivers
+v0x1ebe340_0 .net "HAB", 0 0, L_0x1ec0cf0; 1 drivers
+v0x1ebe3e0_0 .net *"_s0", 0 0, L_0x1ec0870; 1 drivers
+v0x1ebe490_0 .net "ig", 0 0, L_0x1ec08d0; 1 drivers
+S_0x1ebdcb0 .scope module, "BL3" "comparador_1bit" 3 17, 3 3, S_0x1e97340;
+ .timescale -9 -12;
+L_0x1ec0770 .functor XNOR 1, L_0x1ec10d0, L_0x1ec11c0, C4<0>, C4<0>;
+L_0x1ec0de0 .functor AND 1, L_0x1ec1350, L_0x1ec0770, C4<1>, C4<1>;
+v0x1ebdda0_0 .net "A", 0 0, L_0x1ec10d0; 1 drivers
+v0x1ebde60_0 .net "B", 0 0, L_0x1ec11c0; 1 drivers
+v0x1ebdf00_0 .net "HAB", 0 0, L_0x1ec1350; 1 drivers
+v0x1ebdfa0_0 .net *"_s0", 0 0, L_0x1ec0770; 1 drivers
+v0x1ebe050_0 .net "ig", 0 0, L_0x1ec0de0; 1 drivers
+S_0x1ebd870 .scope module, "BL2" "comparador_1bit" 3 18, 3 3, S_0x1e97340;
+ .timescale -9 -12;
+L_0x1ec13f0 .functor XNOR 1, L_0x1ec12b0, L_0x1ec16f0, C4<0>, C4<0>;
+L_0x1ec1450 .functor AND 1, L_0x1ec15f0, L_0x1ec13f0, C4<1>, C4<1>;
+v0x1ebd960_0 .net "A", 0 0, L_0x1ec12b0; 1 drivers
+v0x1ebda20_0 .net "B", 0 0, L_0x1ec16f0; 1 drivers
+v0x1ebdac0_0 .net "HAB", 0 0, L_0x1ec15f0; 1 drivers
+v0x1ebdb60_0 .net *"_s0", 0 0, L_0x1ec13f0; 1 drivers
+v0x1ebdc10_0 .net "ig", 0 0, L_0x1ec1450; 1 drivers
+S_0x1ebd430 .scope module, "BL1" "comparador_1bit" 3 19, 3 3, S_0x1e97340;
+ .timescale -9 -12;
+L_0x1ec18f0 .functor XNOR 1, L_0x1ec17e0, L_0x1ec1d20, C4<0>, C4<0>;
+L_0x1ec1950 .functor AND 1, L_0x1ec1af0, L_0x1ec18f0, C4<1>, C4<1>;
+v0x1ebd520_0 .net "A", 0 0, L_0x1ec17e0; 1 drivers
+v0x1ebd5e0_0 .net "B", 0 0, L_0x1ec1d20; 1 drivers
+v0x1ebd680_0 .net "HAB", 0 0, L_0x1ec1af0; 1 drivers
+v0x1ebd720_0 .net *"_s0", 0 0, L_0x1ec18f0; 1 drivers
+v0x1ebd7d0_0 .net "ig", 0 0, L_0x1ec1950; 1 drivers
+S_0x1e970a0 .scope module, "BL0" "comparador_1bit" 3 20, 3 3, S_0x1e97340;
+ .timescale -9 -12;
+L_0x1ec1fb0 .functor XNOR 1, L_0x1ec1ed0, L_0x1ec22f0, C4<0>, C4<0>;
+L_0x1ec2010 .functor AND 1, L_0x1ec21b0, L_0x1ec1fb0, C4<1>, C4<1>;
+v0x1e9f6e0_0 .net "A", 0 0, L_0x1ec1ed0; 1 drivers
+v0x1ebd1a0_0 .net "B", 0 0, L_0x1ec22f0; 1 drivers
+v0x1ebd240_0 .net "HAB", 0 0, L_0x1ec21b0; 1 drivers
+v0x1ebd2e0_0 .net *"_s0", 0 0, L_0x1ec1fb0; 1 drivers
+v0x1ebd390_0 .net "ig", 0 0, L_0x1ec2010; 1 drivers
+    .scope S_0x1e902b0;
+T_0 ;
+    %vpi_call 2 9 "$dumpfile", "dump.vcd";
+    %vpi_call 2 10 "$dumpvars", 2'sb01;
+    %movi 8, 4, 8;
+    %set/v v0x1ebf4a0_0, 8, 8;
+    %movi 8, 4, 8;
+    %set/v v0x1ebf570_0, 8, 8;
+    %delay 10000, 0;
+    %vpi_call 2 14 "$display", "Resultado = %b", v0x1ebf620_0;
+    %movi 8, 20, 8;
+    %set/v v0x1ebf4a0_0, 8, 8;
+    %movi 8, 36, 8;
+    %set/v v0x1ebf570_0, 8, 8;
+    %delay 10000, 0;
+    %vpi_call 2 17 "$display", "Resultado = %b", v0x1ebf620_0;
+    %movi 8, 4, 8;
+    %set/v v0x1ebf4a0_0, 8, 8;
+    %movi 8, 4, 8;
+    %set/v v0x1ebf570_0, 8, 8;
+    %delay 10000, 0;
+    %vpi_call 2 20 "$display", "Resultado = %b", v0x1ebf620_0;
+    %movi 8, 132, 8;
+    %set/v v0x1ebf4a0_0, 8, 8;
+    %movi 8, 68, 8;
+    %set/v v0x1ebf570_0, 8, 8;
+    %delay 10000, 0;
+    %vpi_call 2 23 "$display", "Resultado = %b", v0x1ebf620_0;
+    %movi 8, 4, 8;
+    %set/v v0x1ebf4a0_0, 8, 8;
+    %movi 8, 4, 8;
+    %set/v v0x1ebf570_0, 8, 8;
+    %delay 10000, 0;
+    %vpi_call 2 26 "$display", "Resultado = %b", v0x1ebf620_0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.sv";
+    "design.sv";

@@ -1,0 +1,38 @@
+$date
+	Tue Aug 25 01:58:28 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench1 $end
+$var wire 1 ! igual $end
+$var reg 8 " A [7:0] $end
+$var reg 8 # B [7:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100 #
+b100 "
+1!
+$end
+#10000
+0!
+b100100 #
+b10100 "
+#20000
+1!
+b100 #
+b100 "
+#30000
+0!
+b1000100 #
+b10000100 "
+#40000
+1!
+b100 #
+b100 "
+#50000
